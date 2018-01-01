@@ -1,0 +1,118 @@
+
+<!--In the year 2017 a man named randomDice created a website that tells you how long unitl new years @random_dice-->
+
+
+<style>
+h1 {
+	font-family:tahoma,arial,sans-serif;
+    font-size:20px;
+    font-weight:none;
+    text-decoration:none;
+}
+
+#demo {
+	font-family:tahoma,arial,sans-serif;
+    font-size:56px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.bordertable{
+    border-width:1px;
+    border-color:#065b1d;
+    border-style:solid;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+.asText {
+background:none;
+border:none;
+margin:0;
+padding:0;
+}
+
+a {
+
+	color:#000;
+    font-size:14px;
+    font-weight:none;
+    font-family:tahoma,arial,sans-serif;
+    text-decoration:none;
+}
+
+</style>
+
+
+
+
+<head>
+<title>Countdown Til New Year 2017</title>
+
+</head>
+
+<table class="bordertable" cellspacing="0" cellpadding="0" border="0" width="1350" >
+<center>
+
+<h1>
+<b>Countdown Til New Year 2017</b>
+</h1>
+<body>
+
+</body>
+
+<p id="demo">
+
+</p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2018 12:0:0").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+</table>
+
+<footer>
+<center>
+ <a href="about.html">about</a> 
+</center>
+</footer>
+
+</center>
