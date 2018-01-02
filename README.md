@@ -1,2 +1,2 @@
-# countdown-newyears
+# A New Years Countdown
 Countdown
